@@ -1,0 +1,179 @@
+@import reset
+
+// max width
+$pc-max-content: 1240px
+$moible-max-content: 800px
+
+// media query
+$phone-media: 891px
+$phones-media: 890px
+
+
+@mixin mobile-width() 
+    @media all and (min-width: 0) and (max-width: $phones-media)
+        max-width: $moible-max-content
+        // transition: all .2s
+        @content
+
+@mixin pc-width() 
+    @media all and (min-width: $phone-media) 
+        max-width: $pc-max-content
+        // transition: all .2s
+        @content
+        
+
+body
+	background: #eee	
+	font-family: 'Helvetica', 'Noto Sans', sans-serif, Microsoft JhengHei
+	// font-family: 'Raleway', sans-serif;
+	// -webkit-font-smoothing: antialiased
+	line-height: 1.5
+	padding-top: 50px
+
+
+
+
+
+.clear
+	clear: both
+.clearfix:before,.clearfix:after
+	content: ""
+	display: table
+.clearfix:after
+	clear: both
+.clearfix
+	zoom: 1 /* ie 6/7 */
+
+
+
+.c-num
+	background: #fffef4
+.c-oprator
+	background: pink
+
+.container
+	+mobile-width
+		width: 100%
+		margin: 0 auto
+		padding: 0 20px
+	+pc-width
+		margin: 0 auto
+		padding: 0 20px
+		
+		
+
+
+
+
+
+
+
+
+.caculator
+	+mobile-width
+		width: 100%
+		border: 3px solid #999
+		
+		.result_section
+			height: 100px
+			width: 100%
+			border: none
+			background: #222
+			padding: 10px 40px
+			color: #FFF
+			text-align: right
+			font-size: 60px
+			display: flex
+			flex-direction: row
+			justify-content: flex-end
+			align-items: center
+
+		.row
+			width: 100%
+			display: flex
+			flex-direction: row
+			justify-content: center
+			align-items: center
+			.oprator_btn
+				width: 25%
+				height: 100px
+				font-size: 30px
+				display: flex
+				flex-direction: row
+				justify-content: center
+				align-items: center
+				border: 1px solid #999
+				cursor: pointer
+				&:active
+					background: #222222
+					color: #FFF
+			.oprator_btn-cross
+				width: 50%
+				height: 100px
+				font-size: 30px
+				display: flex
+				flex-direction: row
+				justify-content: center
+				align-items: center
+				border: 1px solid #999
+				cursor: pointer
+				&:active
+					background: #222222
+					color: #FFF
+
+	+pc-width
+		width: 100%
+		border: 3px solid #999
+		box-shadow: 5px 5px 6px 2px rgba(0,0,0,.2)
+		.result_section
+			height: 100px
+			width: 100%
+			border: none
+			text-align: right
+			background: #222
+			padding: 10px 40px
+			color: #FFF
+			font-size: 60px
+			display: flex
+			flex-direction: row
+			justify-content: flex-end
+			align-items: center
+
+		.row
+			width: 100%
+			display: flex
+			flex-direction: row
+			justify-content: center
+			align-items: center
+			.oprator_btn
+				width: 25%
+				height: 100px
+				font-size: 30px
+				display: flex
+				flex-direction: row
+				justify-content: center
+				align-items: center
+				border: 1px solid #999
+				cursor: pointer
+				&:active
+					background: #222222
+					color: #FFF
+			.oprator_btn-cross
+				width: 50%
+				height: 100px
+				font-size: 30px
+				display: flex
+				flex-direction: row
+				justify-content: center
+				align-items: center
+				border: 1px solid #999
+				cursor: pointer
+				&:active
+					background: #222222
+					color: #FFF
+
+
+.aaa
+	width: 500px
+	height: 300px
+	background: yellow
